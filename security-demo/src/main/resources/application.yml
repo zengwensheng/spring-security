@@ -1,0 +1,45 @@
+server:
+  port: 8010
+  session:
+    timeout: 600
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://118.24.109.67/zwsdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
+authentication:
+  core:
+    browser:
+       login-type: JSON
+    social:
+       filterProcessesUrl: /qqLogin
+       wx:
+         app-id: wxd99431bbff8305a0
+         app-secret: 60f78681d063590a469f1b297feff3c4
+         provider-id: weixin
+       qq:
+         app-id: 101512320
+         app-secret: 8d4b687241ffd8ce89593661be207177
+         provider-id: qq
+    app:
+       token:
+          store-type: redis
+          maximum-tokens: 1
+
+
+
+
+
+
+
+
+
+
+
+
