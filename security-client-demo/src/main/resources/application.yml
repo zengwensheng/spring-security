@@ -1,0 +1,35 @@
+server:
+  port: 8081
+  session:
+    timeout: 600
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://118.24.109.67/zwsdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+authentication:
+ core:
+    app:
+       token:
+          store-type: redis
+    client:
+         client-id: zws
+         client-secret: zws
+         password-token-url: http://localhost:8010/oauth/token
+         password-code-token-url: http://localhost:8010/login
+         sms-token-url: http://localhost:8010/login/sms
+
+
+
+
+
+
+
+
+
+
+

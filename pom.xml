@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zws</groupId>
+    <groupId>com.zws.security</groupId>
     <artifactId>spring-security</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 
@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <lombok.version>1.18.2</lombok.version>
+        <security.version>1.0.0-SNAPSHOT</security.version>
     </properties>
 
     <modules>
@@ -22,6 +23,8 @@
         <module>security-browser</module>
         <module>security-authorize</module>
         <module>security-demo</module>
+        <module>security-client</module>
+        <module>security-client-demo</module>
     </modules>
 
 

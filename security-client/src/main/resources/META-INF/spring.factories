@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.zws.client.authorize.ClientAuthorizeConfigProvider,\
+com.zws.client.authentication.OAuth2ClientConfig,\
+com.zws.client.config.ResourceSecurityConfig
