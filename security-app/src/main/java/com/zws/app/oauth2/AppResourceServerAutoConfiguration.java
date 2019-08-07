@@ -49,6 +49,7 @@ public class AppResourceServerAutoConfiguration extends ResourceServerConfigurer
         if(customTokenService!=null) {
             resources.tokenServices(customTokenService);
         }
+
     }
 
     @Override

@@ -23,15 +23,15 @@ public class CustomRedisTokenStore implements IndexNameOauth2Store {
 
     static final String DEFAULT_SPRING_TOKEN_REDIS_PREFIX = "spring:token:";
 
-    private static final String ACCESS = "access:";
-    private static final String AUTH_TO_ACCESS = "auth_to_access:";
-    private static final String AUTH = "auth:";
-    private static final String REFRESH_AUTH = "refresh_auth:";
-    private static final String ACCESS_TO_REFRESH = "access_to_refresh:";
-    private static final String REFRESH = "refresh:";
-    private static final String REFRESH_TO_ACCESS = "refresh_to_access:";
-    private static final String CLIENT_ID_TO_ACCESS = "client_id_to_access:";
-    private static final String UNAME_TO_ACCESS = "uname_to_access:";
+    private static final String ACCESS = DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"access:";
+    private static final String AUTH_TO_ACCESS =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"auth_to_access:";
+    private static final String AUTH =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"auth:";
+    private static final String REFRESH_AUTH =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"refresh_auth:";
+    private static final String ACCESS_TO_REFRESH =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"access_to_refresh:";
+    private static final String REFRESH = DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"refresh:";
+    private static final String REFRESH_TO_ACCESS =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"refresh_to_access:";
+    private static final String CLIENT_ID_TO_ACCESS =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"client_id_to_access:";
+    private static final String UNAME_TO_ACCESS =  DEFAULT_SPRING_TOKEN_REDIS_PREFIX+"uname_to_access:";
 
     private final RedisConnectionFactory connectionFactory;
     private final RedisOperations<Object, Object> redisOperations;
@@ -40,7 +40,7 @@ public class CustomRedisTokenStore implements IndexNameOauth2Store {
     private RedisTokenStoreSerializationStrategy serializationStrategy = new JdkSerializationStrategy();
 
 
-    private String prefix = DEFAULT_SPRING_TOKEN_REDIS_PREFIX;
+    private String  prefix = DEFAULT_SPRING_TOKEN_REDIS_PREFIX;
 
     public CustomRedisTokenStore(RedisConnectionFactory connectionFactory,RedisOperations<Object, Object> redisOperations) {
         this.connectionFactory = connectionFactory;

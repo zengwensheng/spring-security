@@ -5,8 +5,8 @@ server:
 spring:
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql://118.24.109.67/zwsdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    password: 123456
+    url: jdbc:mysql://localhost/user?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.jdbc.Driver
   session:
     store-type: redis
@@ -16,7 +16,9 @@ spring:
 authentication:
   core:
     browser:
-       login-type: JSON
+       login-type: REDIRECT
+       session:
+          maximum-sessions: 1
     social:
        filterProcessesUrl: /qqLogin
        wx:
